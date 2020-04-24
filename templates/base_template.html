@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.2.7/dist/tf.min.js"></script>
+    {% block head %} {% endblock %}
+  </head>
+  
+  <body>
+    <!-- TITLE -->
+    <header>Weather<br/>Prophecy</header>
+    {% block body %} {% endblock %}
+    
+    <!-- NAV -->
+    <nav>
+      <div class="search-bar">
+        <button class="btn">
+          <img
+          id="button"
+          src="{{ url_for('static', filename = 'images/search_button.png') }}"
+          onclick="do_search()"
+          />
+        </button>
+        <input
+        id="search_bar"
+        class="bar"
+        type="text"
+        placeholder="State"
+        value=""
+        />
+      </div>
+      <div class="nav-links">
+        <a href="index" class="ref-links">HOME</a>
+        <a href="about" class="ref-links" style="margin-top: 50px">ABOUT</a>
+      </div>
+    </nav>
+    
+    <script src="{{ url_for('static', filename='js/search.js') }}"></script>
+  </body>
+</html>

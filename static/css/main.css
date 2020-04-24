@@ -1,0 +1,196 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 99vw;
+  font-family: 'Montserrat', 'Sans-Serrif';
+  background-color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  color: #74c8de;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 600;
+  text-decoration: none;
+  pointer-events: none;
+}
+
+main {
+  height: 100%;
+  -webkit-box-flex: 4;
+      -ms-flex-positive: 4;
+          flex-grow: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: -4%;
+}
+
+main .dir {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #e6e6e6;
+  font-size: 22px;
+  pointer-events: none;
+}
+
+main .map {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+main .map svg path {
+  stroke: #000;
+  stroke-width: 0.5px;
+  fill: #FF2424;
+  opacity: 0.8;
+}
+
+main .map svg path:hover {
+  opacity: 1;
+}
+
+nav {
+  margin-top: -5%;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav .search-bar {
+  margin-bottom: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav .search-bar .bar {
+  height: 35px;
+  width: 100%;
+  color: #74c8de;
+  font-size: 22px;
+  font-weight: 200;
+  border: none;
+  -webkit-transition: border-bottom 300ms;
+  transition: border-bottom 300ms;
+  border-bottom: 2px solid #333;
+  background-color: #000;
+}
+
+nav .search-bar .bar:focus, nav .search-bar .bar:hover {
+  outline: none;
+  -webkit-transition: border-bottom 300ms;
+  transition: border-bottom 300ms;
+  border-bottom: 2px solid #e6e6e6;
+  opacity: 1;
+}
+
+nav .search-bar .btn {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  margin-top: 5px;
+  background-color: #000;
+  border: none;
+  opacity: 0.2;
+  color: #000;
+  cursor: pointer;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms;
+  outline: 0;
+}
+
+nav .search-bar .btn:hover {
+  opacity: 0.9;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms;
+}
+
+nav .nav-links {
+  text-align: center;
+}
+
+nav .nav-links .ref-links {
+  display: inline;
+  font-size: 22px;
+  color: #74c8de;
+  text-decoration: none;
+}
+
+nav .nav-links .ref-links::after {
+  content: "";
+  display: block;
+  margin: 0 0 50px 0;
+  border-bottom: solid 3px #FF2424;
+  -webkit-transform: scaleX(0.00001);
+          transform: scaleX(0.00001);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  color: #DE3E3E;
+  opacity: 0.8;
+}
+
+nav .nav-links .ref-links:hover::after {
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+}
+/*# sourceMappingURL=main.css.map */

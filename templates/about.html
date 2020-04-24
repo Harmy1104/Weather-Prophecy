@@ -1,0 +1,72 @@
+{% extends 'base_template.html' %}
+<!-- HEAD -->
+{% block head %}
+
+<title>About us</title>
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename = 'css/about.css') }}"
+  type="text/css"
+/>
+
+{% endblock %}
+
+<!-- BODY -->
+{% block body %}
+
+<div class="container">
+  <h1 class="question">About Us</h1>
+  <p class="para">
+    Deep and I are 7<sup>th</sup> semester students in <bold>LDRP-ITR</bold>. We
+    are good friends and have been wanting to work together for a while. Then we
+    decided to built this project to the best of our abilities. We took this
+    project because we have one thing in common and that is the will to solve
+    problems. And a project like this would server us with a lot of challenges,
+    we guessed, and we were right.
+  </p>
+  <div class="us">
+    <div id="harmy" class="personal">
+      <img
+        src="{{ url_for('static', filename = 'images/harmee.jpg') }}"
+        alt="Harmee Patel"
+      />
+      <div class="info">
+        <p>Harmee Patel</p>
+        <p>Computer Engineering</p>
+        <p>7<sup>th</sup> Sem Student</p>
+      </div>
+    </div>
+    <div id="deep" class="personal">
+      <img src="{{ url_for('static', filename = 'images/deep.jpg') }}" alt="" />
+      <div class="info">
+        <p>Deep Gajjar</p>
+        <p>Computer Engineering</p>
+        <p>7<sup>th</sup> Sem Student</p>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="question">Why to do this project?</h1>
+  <p class="para">
+    Machine learning, as we know it today is being used for many different
+    things, among one of them is weather data analysis and weather prediction.
+    In this project we are going to develop a web application named Weather
+    Prophecy. In this web application we will be developing a web application
+    which gives user information about the weather of a particular Indian state
+    or city. The main purpose of our application is to provide the user with
+    extensive weather information, so that they can plan or schedule their day
+    accordingly. This is also useful to people who just wants to check the
+    weather. Weather Prophecy web application requires no user permissions for
+    data, except their location. The location helps us to see which state the
+    user is in and hence can show relevant data for weather in the city or state
+    the user is in. This web application has mainly has two pages: Home and
+    About. The user can directly search for a particular city in the search bar
+    or can click on any of the states on the map of India. This will redirect
+    the user to another page, where they will be given detailed information
+    about previous as well as upcoming weather. Information like: temperature,
+    pressure, wind speed and direction, etc will all be given in graphical
+    format so that it is easy to understand.
+  </p>
+</div>
+
+{% endblock %}

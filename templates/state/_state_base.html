@@ -1,0 +1,41 @@
+{% extends 'base_template.html' %}
+<!-- HEAD -->
+{% block head %}
+
+{% block state_head %} {% endblock %}
+<link rel="stylesheet" href="{{  url_for('static', filename = 'css/state.css') }}" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+
+{% endblock %}
+
+<!-- BODY -->
+{% block body %}
+
+<!-- Main -->
+<main>
+  <div class="dir">
+    INDIA
+    <div style="color: #74c8de">v</div>
+    {% block state_name %}{% endblock %}
+  </div>
+  <div class="map">
+    {% block state_map %}{% endblock %}
+  </div>
+  <div class="subnav">
+    <ul>
+      <li><button id="tmp" class="tabs">Temperature</button></li>
+      <li><button id="prs" class="tabs">Pressure</button></li>
+      <li><button id="wnd" class="tabs">Wind</button></li>
+      <li><button id="hmd" class="tabs">Humidity</button></li>
+    </ul>
+  </div>
+  <div class="chartContainer">
+    <canvas class="graph" id="tmpChart" width="20" height="10"></canvas>
+    <canvas class="graph" id="prsChart" width="10" height="5"></canvas>
+    <canvas class="graph" id="wndChart" width="10" height="5"></canvas>
+    <canvas class="graph" id="hmdChart" width="10" height="5"></canvas>
+  </div>
+</main>
+<script src="{{ url_for('static', filename = 'js/state.js') }}"></script>
+
+{% endblock %}
